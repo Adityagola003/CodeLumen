@@ -63,6 +63,21 @@ source .venv/bin/activate
 pip install -r backend/requirements.txt
 ```
 
+Copy the example environment file when you want to customize local settings:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+On macOS/Linux:
+
+```bash
+cp .env.example .env
+```
+
+The default values keep analysis local and rule-based. Replace `JWT_SECRET` and
+add provider credentials only when enabling optional integrations.
+
 ### 3. Start the API
 
 From the repository root:
